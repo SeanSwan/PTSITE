@@ -1,0 +1,91 @@
+@import "./variables";
+
+// FUNCTIONALITY
+.cardMain {
+  perspective: 150rem;
+  -moz-perspectiv: 150rem;
+  position: relative;
+  height: 50rem;
+  &_side {
+    background-color: blue;
+    color: #fff;
+    font-size: 2rem;
+    height: 50rem;
+    transition: all 0.8s ease;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 250px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15) 
+  }
+    &--front {
+      background-color: blue;
+    }
+    
+    &--back {
+      background-color: rgb(87, 241, 4);
+      transform: rotateY(180deg);
+  }
+  &:hover &_side--front {
+    transform: scale(1.1);
+    z-index: 9999;
+  }
+
+  // FRONT SIDE STYLING
+  &_picture {
+    background-size: cover;
+    height: 40rem;
+    background-blend-mode: darken;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    
+  }
+  &_heading {
+    font-size: 2.9rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: 16rem;
+    right: 6rem;
+    width: 75%;
+
+    opacity: 8;
+  }
+  &_heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-image: linear-gradient(
+      to right bottom,
+      rgb(4, 217, 241),
+      rgb(0, 9, 170)
+    );
+  }
+
+  &_details {
+    padding: 3rem;
+    p {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      
+    }
+  }
+
+    &_pagTest  {
+      color: red;
+      overflow: scroll;
+      text-align: center;
+      font-size: 2.0rem;
+      padding: 1rem;
+      z-index: 1;
+      &:not(:last-child) {
+        border-bottom: 1px solid #eee;
+    }
+  }
+}

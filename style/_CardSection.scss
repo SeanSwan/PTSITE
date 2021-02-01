@@ -1,0 +1,134 @@
+@import "./variables";
+
+.cardMain1 {
+  perspective: 150rem;
+  -moz-perspectiv: 150rem;
+  position: relative;
+  height: 52rem;
+  margin: 10px !important;
+  max-width:  200rem !important;
+
+  &_picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-image: linear-gradient(
+      to right bottom,
+      $color-secondary-light,
+      $color-secondary-dark
+    );
+    overflow: hidden;
+    border-radius: 100rem;
+  }
+
+  &_heading-span {
+    padding: 1rem 1.5rem;
+    margin-top: 6rem;
+    margin-left: 6rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-image: linear-gradient(
+      to right bottom,
+      rgb(4, 217, 241),
+      rgb(0, 9, 170)
+    );
+  }
+
+  &_side {
+    background-color: blue;
+    color: #fff;
+    font-size: 3rem;
+    height: 50rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 250px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    
+
+    &--front {
+      background-color: blue;
+    }
+    &--back {
+      background-color: rgb(87, 241, 4);
+      transform: rotateY(180deg);
+      background-image: linear-gradient(
+        to right bottom,
+        $color-secondary-light,
+        $color-secondary-dark
+      );
+    }
+
+    // FRONT SIDE STYLING
+    &_picture {
+      background-size: cover;
+      height: 25rem;
+      background-blend-mode: screen;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      border-top-left-radius: -250px;
+      border-top-right-radius: -250px;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-secondary-light,
+        $color-secondary-dark
+      );
+      overflow: hidden;
+      border-radius: 100rem;
+    }
+    
+    
+    
+
+    &_details {
+      padding: 3rem;
+      ul {
+        list-style: none;
+        width: 80%;
+        margin: 0 auto;
+      }
+      li,
+      p {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+      }
+
+      
+    }
+
+   
+  }
+   
+ .btn,
+ .btn:link,
+ .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 6rem;
+  margin-left: 10rem;
+
+ }
+
+
+  
+}

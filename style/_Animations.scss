@@ -1,0 +1,95 @@
+//Animation
+
+//NAVBAR
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 51%
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 51%
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 51%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 51%
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 51%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 51%
+  }
+}
+
+
+
+
+//Header----------------------------------------------------------------------------------------------
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  60% {
+    transform: rotate(
+      180
+    ); //This is not doing anything just play with it or delete but were good otherwise
+  }
+
+  80% {
+    transform: translateX(
+      1rem
+    ); // this moves the header back  <---- x  to give it the smooth  reverse look at the end 80% of the animation..
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+
+

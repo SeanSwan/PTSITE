@@ -1,0 +1,163 @@
+.section-packages {
+  background-color: $color-hot-pink;
+  padding: 25rem 0 50rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      $color-hot-pink,
+      #0767acc5,
+      rgba(73, 3, 113, 0.884),
+      $color-hot-pink
+    ),
+    url(../assets/pics/sean.jpg);
+  background-size: cover;
+  margin-top: -11rem;
+} //FUNCTIONALITY
+.cardP {
+  perspective: 150rem;
+  -moz-perspectiv: 150rem;
+  position: relative;
+  height: 50rem;
+  &_side {
+    background-color: $color-primary-light;
+    color: #fff;
+    font-size: 3rem;
+    height: 50rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 250px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    &--front {
+      background-color: rgb(229, 255, 0);
+    }
+    &--back {
+      background-color: $color-hot-pink;
+      transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-hot-pink,
+          $color-hot-pink-2
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-hot-pink,
+          $color-hot-pink-2
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-hot-pink,
+          $color-hot-pink-2
+        );
+      }
+    }
+  }
+  &:hover &_side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &_side--back {
+    transform: rotateY(0deg);
+  } //FRONT SIDE STYLING
+  &_picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: darken;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    &-1 {
+      background-image: url(../assets/pics/sean.jpg);
+    }
+    &-2 {
+      background-image: url(../assets/pics/Javelin.jpg);
+    }
+    &-3 {
+      background-image: url(../assets/pics/balance2.jpeg);
+    }
+  }
+  &_heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+    position: absolute;
+  }
+  &_heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-hot-pink,
+        $color-hot-pink-2
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-hot-pink,
+        $color-hot-pink-2
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-hot-pink,
+        $color-hot-pink-2
+      );
+    }
+  }
+  &_details {
+    padding: 3rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+    }
+    li {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1rem;
+      &:not(:last-child) {
+        border-bottom: 1px solid #eee;
+      }
+    }
+  } //FRONT SIDE STYLING
+  &_cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 90%;
+    text-align: center;
+  }
+  &_price-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+  &_price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+  &_price-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+}

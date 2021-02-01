@@ -1,0 +1,196 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//start
+
+.header {
+  height: 75vh; //height of header is 95% of the view port or view height
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); // polygon on the right side goes up to 75vh so the diffrance is about 20 vh from the height working with the about section to blend it in.
+  background: linear-gradient(271deg, #4a76a0, #0045f3, #50bcee, #680696);
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  -o-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+
+  .text-box {
+    // & allows me to nest child seclectors into the parent selector.
+    position: absolute;
+    top: 40%; // Postion is in relation 50% of the Parent Element
+    left: 50%; // Postion is relation 50% of the Parent Element
+    transform: translate(
+      -50%,
+      -50%
+    ); // translate is in relation to the element itself
+    text-align: center;
+  }
+}
+
+.heading-primary {
+  color: whitesmoke;
+  text-transform: uppercase; // changes text to uppercase
+  backface-visibility: hidden;
+  text-shadow: 3px 3px 3px #000;
+  font-size: rem !important; //Hides the back of an element but reduces shakeyness in animation in this trick.
+
+  &-main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3rem; // spaces out letters
+
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+  }
+
+  &-sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    backface-visibility: hidden; // it worked!
+  }
+
+  &-sub2 {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    backface-visibility: hidden;
+  }
+
+  &-sub3 {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+    backface-visibility: hidden;
+  }
+
+  &-sub4 {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-delay: 0.6s;
+    backface-visibility: hidden;
+  }
+
+  &-sub5 {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-delay: 0.8s;
+    backface-visibility: hidden;
+  }
+}
+
+.btn {
+  &:link,
+  &:visited {
+    //psudeo classes button animation
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 200px;
+    transition: all 0.2s;
+    position: relative;
+    font-size: $default-font-size; // fontsize was 16px but changed it to rem 1.6px
+
+    &:hover {
+      // on btn hover
+      transform: translateY(
+        -3px
+      ); // only px i did not see changed to em im thinking of small size but will do test.
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      transform: translateY(
+        -1px
+      ); //  same here '' also this is when button is active
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &-white {
+    background-color: rgb(98, 12, 179); // color of main button
+    color: $color-primary-light;
+  }
+
+  &::after {
+    // this is a second button animation in the background
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 20rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &-white::after {
+    background-color: rgb(93, 100, 194); //color of  background button
+  }
+
+  &:hover::after {
+    transform: scaleX(1.4) scaleY(1.6); // button hover effect scaleX(), and sccaleY() used with Transform
+    opacity: 0.2;
+  }
+
+  &-animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &::visited {
+    font-size: 1.6rem;
+    color: $color-aqua-green;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    transition: all 0.2s;
+    border-radius: 10rem;
+  }
+
+  &:hover {
+    background-color: $color-aqua-green;
+    color: $color-primary;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    transform: translateY(0);
+  }
+}
